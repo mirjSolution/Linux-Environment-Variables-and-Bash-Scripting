@@ -41,6 +41,8 @@ printenv | grep DB   # Filter environment variables by keyword
 echo $USER           # Using in shell
 ```
 
+![Filter Environment](Images/envfilter.png)
+
 ### 4. **Creating/Exporting Environment Variables**
 
 ```bash
