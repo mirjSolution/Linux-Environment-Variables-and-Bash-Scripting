@@ -47,7 +47,7 @@ echo $USER           # Using in shell
 
 ```bash
 export DB_USER="admin"
-export DB_PASS="secret"
+export DB_PASS="secretpwd"
 
 printenv | grep DB_
 ```
@@ -58,7 +58,12 @@ printenv | grep DB_
 
 ```bash
 unset DB_USER
+unset DB_PASS
+
+printenv | grep DB_
 ```
+
+![Unset](Images/unset.png)
 
 ### 6. **Persisting Environment Variables**
 
