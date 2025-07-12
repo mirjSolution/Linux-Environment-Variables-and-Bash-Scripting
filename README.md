@@ -41,14 +41,18 @@ printenv | grep DB   # Filter environment variables by keyword
 echo $USER           # Using in shell
 ```
 
-![Filter Environment](Images/envfilter.png)
+![Referencing](Images/referencing.png)
 
 ### 4. **Creating/Exporting Environment Variables**
 
 ```bash
 export DB_USER="admin"
 export DB_PASS="secret"
+
+printenv | grep DB_
 ```
+
+![Create and Exporting](Images/create.png)
 
 ### 5. **Unsetting Environment Variables**
 
