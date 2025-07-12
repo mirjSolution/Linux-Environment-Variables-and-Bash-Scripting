@@ -46,8 +46,8 @@ echo $USER           # Using in shell
 ### 4. **Creating/Exporting Environment Variables**
 
 ```bash
-export DB_USER=admin
-export DB_PASS=secretpwd
+export DB_USER="admin"
+export DB_PASS="secretpwd"
 
 printenv | grep DB_
 ```
@@ -82,27 +82,6 @@ source ~/.bashrc
 
 ![Persist](Images/persisting.gif)
 
-- **Globally**: Edit `/etc/environment` (requires sudo)
-
----
-
-## ⚙️ Bash Script Example
-
-```bash
-#!/bin/bash
-
-echo "Running setup..."
-export DB_USER="dev_user"
-echo "Database user: $DB_USER"
-```
-
-### Executing:
-
-```bash
-chmod +x script.sh
-./script.sh
-```
-
 ---
 
 ## 🔐 Why Use Environment Variables?
@@ -113,27 +92,51 @@ chmod +x script.sh
 
 ---
 
-## 📁 Modifying $PATH
+## 📁 Modifying $PATH and Add a custom command/program
 
-Add custom script directory:
+![Custom](Images/custom.gif)
 
-```bash
-export PATH="$PATH:/home/username/scripts"
-```
-
-Or in `.bashrc`:
+### Bash Script Example
 
 ```bash
-PATH="$PATH:$HOME/scripts"
+vim greet
 ```
-
-Then run your script globally:
 
 ```bash
-myscript
+#!/bin/bash
+
+echo "Hello World"
 ```
 
----
+### Allow all users to run the script
+
+```bash
+chmod a+x greet
+```
+
+### Add PATH to all users
+
+```bash
+vim .bashrc
+```
+
+Add this inside .bashrc
+
+```bash
+export PATH="$PATH:/home/rico-john-dato-on"
+```
+
+```bash
+source .bashrc
+```
+
+or can be access globally by updating the PATH of /etc/environment
+
+Then run your script:
+
+```bash
+greet
+```
 
 ## 💡 Summary
 
