@@ -46,8 +46,8 @@ echo $USER           # Using in shell
 ### 4. **Creating/Exporting Environment Variables**
 
 ```bash
-export DB_USER="admin"
-export DB_PASS="secretpwd"
+export DB_USER=admin
+export DB_PASS=secretpwd
 
 printenv | grep DB_
 ```
@@ -70,7 +70,8 @@ printenv | grep DB_
 - **Per User**: Add to `~/.bashrc`
 
 ```bash
-export DB_NAME="my_database"
+export DB_USERNAME=rico
+export DB_PASS=secretpwd
 ```
 
 - Reload with:
@@ -78,6 +79,8 @@ export DB_NAME="my_database"
 ```bash
 source ~/.bashrc
 ```
+
+![Persist](Images/persisting.gif)
 
 - **Globally**: Edit `/etc/environment` (requires sudo)
 
